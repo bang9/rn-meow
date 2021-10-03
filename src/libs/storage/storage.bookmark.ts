@@ -1,7 +1,7 @@
 import { ItemStorageImpl, StorageItemId, StorageItemInterface } from "../../interfaces/interface.storage";
 import { CatImageResponseInterface } from "../../interfaces/interface.api";
 
-export type BookmarkItem = StorageItemInterface & Omit<CatImageResponseInterface, "id"> & { createdAt: number };
+export type BookmarkItem = StorageItemInterface & Omit<CatImageResponseInterface, "id">;
 export default class BookmarkItemStorage extends ItemStorageImpl<BookmarkItem> {
     storageKey = "storage@bookmark";
     items: Record<StorageItemId, BookmarkItem> = {};
