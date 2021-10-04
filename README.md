@@ -1,14 +1,14 @@
 ## 설치 및 실행
 
-### 환경변수 설정
-
--   프로젝트 루트의 `.env.sample` 파일을 복사하여 `.env` 파일을 생성하고, 환경변수를 채워넣습니다.
--   `yarn env:dev` 명령어로 런타임용 환경변수 파일을 추출합니다.
-
 ### 의존성 설치
 
 -   `yarn install` 명령어로 node modules 의존성을 설치합니다.
 -   `npx pod-install` 혹은 `cd ios && pod install` 로 cocoapods 의존성을 설치합니다.
+
+### 환경변수 설정
+
+-   프로젝트 루트의 `.env.sample` 파일을 복사하여 `.env` 파일을 생성하고, 환경변수를 채워넣습니다.
+-   `yarn env:dev` 명령어로 런타임용 환경변수 파일을 추출합니다.
 
 ### 실행
 
