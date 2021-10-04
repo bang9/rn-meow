@@ -1,5 +1,5 @@
 import { CatImageResponseInterface } from "../libs/interfaces/interface.api";
-import { Route, RouteProp } from "@react-navigation/native";
+import { Route } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "react-native-screens/src/native-stack/types";
 
 enum Routes {

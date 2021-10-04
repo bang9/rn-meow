@@ -14,12 +14,7 @@ const CatImageView: React.FC<Props> = ({ cat, bookmarked, onRemoveBookmark }) =>
         <View style={StyleSheet.absoluteFill}>
             <Image resizeMode={"cover"} source={{ uri: cat.url }} style={StyleSheet.absoluteFill} />
             {bookmarked && (
-                <Pressable
-                    style={styles.icon}
-                    onPress={() => {
-                        onRemoveBookmark?.(cat);
-                    }}
-                >
+                <Pressable style={styles.icon} onPress={() => onRemoveBookmark?.(cat)}>
                     <Icon icon={"star-fill"} color={Styles.color.yellow} />
                 </Pressable>
             )}

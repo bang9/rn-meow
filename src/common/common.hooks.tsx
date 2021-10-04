@@ -14,5 +14,5 @@ export const useUpdateBookmarkNavigationButton = (navigation: RouteProps<any>["n
             );
         };
         navigation.setOptions({ headerRight });
-    }, []);
+    }, [navigation]);
 };

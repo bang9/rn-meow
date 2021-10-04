@@ -31,17 +31,11 @@ const BookmarkScreen: React.FC<Props> = () => {
             data={bookmarks}
             numColumns={COLUMN}
             keyExtractor={item => item.id}
-            renderItem={({ item }) => {
-                return (
-                    <View style={gridStyle}>
-                        <CatImageView
-                            cat={item}
-                            bookmarked={isBookmarked(item.id)}
-                            onRemoveBookmark={onRemoveBookmark}
-                        />
-                    </View>
-                );
-            }}
+            renderItem={({ item }) => (
+                <View style={gridStyle}>
+                    <CatImageView cat={item} bookmarked={isBookmarked(item.id)} onRemoveBookmark={onRemoveBookmark} />
+                </View>
+            )}
         />
     );
 };
