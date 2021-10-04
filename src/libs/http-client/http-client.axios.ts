@@ -1,7 +1,7 @@
 import Axios from "axios";
-import { createHttpClient } from "../../interfaces/interface.http";
+import { createHTTPClient } from "../../interfaces/interface.http";
 
-const createAxiosClient: createHttpClient = opts => {
+const createAxiosClient: createHTTPClient = opts => {
     const instance = Axios.create({ baseURL: opts?.baseURL, headers: opts?.defaultHeaders });
     instance.interceptors.response.use(res => res.data);
     return instance;

@@ -3,7 +3,7 @@ export interface RequestConfigInterface {
     headers?: Record<string, any>;
 }
 
-export interface HttpClientInterface {
+export interface HTTPClientInterface {
     get<T = any>(url: string, config?: RequestConfigInterface): Promise<T>;
     options<T = any>(url: string, config?: RequestConfigInterface): Promise<T>;
     delete<T = any>(url: string, config?: RequestConfigInterface): Promise<T>;
@@ -12,10 +12,10 @@ export interface HttpClientInterface {
     patch<T = any>(url: string, data?: any, config?: RequestConfigInterface): Promise<T>;
 }
 
-export type HttpClientOptions = {
+export type HTTPClientOptions = {
     baseURL?: string;
     defaultHeaders?: RequestConfigInterface["headers"];
 };
-export interface createHttpClient {
-    (opts?: HttpClientOptions): HttpClientInterface;
+export interface createHTTPClient {
+    (opts?: HTTPClientOptions): HTTPClientInterface;
 }
