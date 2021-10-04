@@ -3,14 +3,22 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import Styles from "../common/common.styles";
 
 type Props = {
+    disabled?: boolean;
     title: string;
     onPress: () => void;
     color?: string;
     titleColor?: string;
 };
-const Button: React.FC<Props> = ({ title, onPress, color = Styles.color.primary, titleColor = Styles.color.white }) => {
+const Button: React.FC<Props> = ({
+    disabled,
+    title,
+    onPress,
+    color = Styles.color.primary,
+    titleColor = Styles.color.white
+}) => {
     return (
         <TouchableOpacity
+            disabled={disabled}
             activeOpacity={0.75}
             onPress={() => onPress()}
             style={[styles.button, { backgroundColor: color }]}

@@ -1,12 +1,13 @@
 import { View, ActivityIndicator, StyleSheet } from "react-native";
 import React, { useEffect, useState } from "react";
+
 import Styles from "../common/common.styles";
 import Routes, { RouteProps } from "../common/common.routes";
-import Button from "../components/Button";
+import API from "../libs/api";
 import { useUpdateBookmarkNavigationButton } from "../common/common.hooks";
 import { CatImageResponseInterface } from "../libs/interfaces/interface.api";
-import API from "../libs/api";
 import { useBookmark } from "../contexts/context.service.bookmark";
+import Button from "../components/Button";
 import CatImageView from "../components/CatImageView";
 
 type Props = RouteProps<Routes.VOTING>;
@@ -44,9 +45,19 @@ const VotingScreen: React.FC<Props> = ({ navigation }) => {
             </View>
 
             <View style={styles.buttonContainer}>
-                <Button title={"Like"} color={Styles.color.success} onPress={onPressLike} />
+                <Button
+                    disabled={cats.length === 0}
+                    title={"Like"}
+                    color={Styles.color.success}
+                    onPress={onPressLike}
+                />
                 <View style={{ width: 8 }} />
-                <Button title={"Not like"} color={Styles.color.error} onPress={onPressNotLike} />
+                <Button
+                    disabled={cats.length === 0}
+                    title={"Not like"}
+                    color={Styles.color.error}
+                    onPress={onPressNotLike}
+                />
             </View>
         </View>
     );
