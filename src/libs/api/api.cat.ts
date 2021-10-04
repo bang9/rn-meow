@@ -1,7 +1,7 @@
 import createAxiosClient from "../http-client/http-client.axios";
 import env from "../../environment";
-import { HTTPClientInterface } from "../../interfaces/interface.http";
-import { CatImageResponseInterface } from "../../interfaces/interface.api";
+import { HTTPClientInterface } from "../interfaces/interface.http";
+import { CatImageResponseInterface } from "../interfaces/interface.api";
 
 const catHTTPClient = createAxiosClient({
     baseURL: env.API_URL_CAT,

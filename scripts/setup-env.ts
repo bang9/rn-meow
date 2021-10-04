@@ -1,4 +1,4 @@
-import { ENV_LIST } from "../src/libs/utils/util.environment";
+import { ENV_LIST } from "../src/libs/util/util.environment";
 import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";

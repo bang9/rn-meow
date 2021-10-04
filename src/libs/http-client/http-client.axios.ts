@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { createHTTPClient } from "../../interfaces/interface.http";
+import { createHTTPClient } from "../interfaces/interface.http";
 
 const createAxiosClient: createHTTPClient = opts => {
     const instance = Axios.create({ baseURL: opts?.baseURL, headers: opts?.defaultHeaders });

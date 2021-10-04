@@ -1,4 +1,4 @@
-import { StorageItemInterface } from "../../interfaces/interface.storage";
+import { StorageItemInterface } from "../interfaces/interface.storage";
 
 export function recordToArray<T extends Record<string, any>>(
     items: T

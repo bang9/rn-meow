@@ -1,6 +1,6 @@
-import { StorageInterface, StorageItemId, StorageItemInterface } from "../../interfaces/interface.storage";
-import { CatImageResponseInterface } from "../../interfaces/interface.api";
-import { recordToArray, sortByDescStorageItem } from "../utils/util.function";
+import { StorageInterface, StorageItemId, StorageItemInterface } from "../interfaces/interface.storage";
+import { CatImageResponseInterface } from "../interfaces/interface.api";
+import { recordToArray, sortByDescStorageItem } from "../util/util.function";
 
 export type BookmarkItem = StorageItemInterface & Omit<CatImageResponseInterface, "id">;
 

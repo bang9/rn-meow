@@ -1,13 +1,16 @@
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
 import RootStack from "./screens/rootStack";
 import CombinedContext from "./contexts/combine";
 
 const App: React.FC = () => {
     return (
-        <CombinedContext>
-            <RootStack />
-        </CombinedContext>
+        <NavigationContainer>
+            <CombinedContext>
+                <RootStack />
+            </CombinedContext>
+        </NavigationContainer>
     );
 };
 
