@@ -22,6 +22,8 @@ const Styles = {
         success: "#0ead69",
         error: "#e34d4d",
         white: "#ffffff",
+        black: "#000000",
+        transparent: "transparent",
         whiteGray: "#f8f8f8",
         gray0: "#d7d7d7",
         gray1: "#b2b2b2",

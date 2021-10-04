@@ -10,8 +10,9 @@ type Props = {
     onRemoveBookmark?: (id: CatImageResponseInterface) => void;
 };
 const CatImageView: React.FC<Props> = ({ cat, bookmarked, onRemoveBookmark }) => {
+    const backgroundColor = cat.url.endsWith(".png") ? Styles.color.gray3 : Styles.color.transparent;
     return (
-        <View style={StyleSheet.absoluteFill}>
+        <View style={[StyleSheet.absoluteFill, { backgroundColor }]}>
             <Image resizeMode={"cover"} source={{ uri: cat.url }} style={StyleSheet.absoluteFill} />
             {bookmarked && (
                 <Pressable style={styles.icon} onPress={() => onRemoveBookmark?.(cat)}>

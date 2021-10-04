@@ -11,7 +11,7 @@ enum Routes {
 export const RouteTitles: Record<Routes, string> = {
     voting: "Do you like cat?",
     bookmark: "I like cats",
-    catDetail: " "
+    catDetail: "-"
 };
 
 export type RouteParamsUnion =
