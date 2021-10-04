@@ -30,10 +30,8 @@ export type RouteParamsUnion =
           };
       };
 
-type ExtractParams<Route extends Routes, Props extends RouteParamsUnion> = Props extends { route: Route }
-    ? Props["params"]
-    : never;
-type RouteParams<T extends Routes> = ExtractParams<T, RouteParamsUnion>;
+type ExtractParams<R extends Routes, U extends RouteParamsUnion> = U extends { route: R } ? U["params"] : never;
+type RouteParams<R extends Routes> = ExtractParams<R, RouteParamsUnion>;
 type ParamListBase<T extends RouteParamsUnion = RouteParamsUnion> = {
     [k in T["route"]]: T["params"];
 };
