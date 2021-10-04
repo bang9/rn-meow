@@ -13,14 +13,18 @@ const RootStack: React.FC = () => {
             <Stack.Screen
                 name={Routes.VOTING}
                 component={VotingScreen}
-                options={{ title: RouteTitles[Routes.VOTING] }}
+                options={{ title: RouteTitles[Routes.VOTING], headerBackTitleVisible: false }}
             />
             <Stack.Screen
                 name={Routes.BOOKMARK}
                 component={BookmarkScreen}
-                options={{ title: RouteTitles[Routes.BOOKMARK] }}
+                options={{ title: RouteTitles[Routes.BOOKMARK], headerBackTitleVisible: false }}
             />
-            <Stack.Screen name={Routes.CAT_DETAIL} component={CatDetailScreen} />
+            <Stack.Screen
+                name={Routes.CAT_DETAIL}
+                component={CatDetailScreen}
+                options={{ headerBackTitleVisible: false }}
+            />
         </Stack.Navigator>
     );
 };

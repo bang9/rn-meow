@@ -18,7 +18,9 @@ const Styles = {
         tiny: scale(12)
     },
     color: {
-        main: "#ff8888",
+        primary: "#0a93ec",
+        success: "#0ead69",
+        error: "#e34d4d",
         white: "#ffffff",
         whiteGray: "#f8f8f8",
         gray0: "#d7d7d7",
@@ -27,7 +29,7 @@ const Styles = {
         gray3: "#7e7e7e",
         gray4: "#4f4f4f",
         gray5: "#424242",
-        yellow: '#ffca5c'
+        yellow: "#ffca5c"
     }
 };
 export default Styles;
