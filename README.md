@@ -17,7 +17,7 @@
 
 ## 환경변수 추가
 
--   `src/utils/util.environment` 파일의 `ENV_LIST` 에 추가할 키를 업데이트 합니다.
+-   `scripts/setup-env.js` 파일의 `ENV_LIST` 에 추가할 키를 업데이트 합니다.
 -   `.env.sample` 파일을 업데이트합니다.
 -   `.env` 파일에 환경변수를 채워넣습니다.
 -   `yarn env:dev` 명령어를 실행합니다.

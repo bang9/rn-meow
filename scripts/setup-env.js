@@ -1,9 +1,10 @@
-import { ENV_LIST } from "../src/libs/util/util.environment";
-import fs from "fs";
-import path from "path";
-import dotenv from "dotenv";
+const fs = require("fs");
+const path = require("path");
+const dotenv = require("dotenv");
 
-function run(env: string) {
+const ENV_LIST = ["API_KEY_CAT", "API_URL_CAT"];
+
+function run(env) {
     const rootPath = process.cwd();
     const envSettingPath = path.join(rootPath, ".env");
     const envRuntimePath = path.join(rootPath, "/src/environment.ts");
@@ -12,11 +13,15 @@ function run(env: string) {
     dotenv.config({ path: envSettingPath });
 
     const envVars = ENV_LIST.reduce((accum, curr) => {
-        accum[curr] = process.env[curr] as string;
+        accum[curr] = process.env[curr];
         return accum;
-    }, {} as { [k in typeof ENV_LIST[number]]: string });
+    }, {});
 
-    const file = `export default ${JSON.stringify(envVars, null, 4)}`;
+    const file = `export const ENV_LIST = ${JSON.stringify(ENV_LIST)};\nexport default ${JSON.stringify(
+        envVars,
+        null,
+        4
+    )}`;
     fs.writeFileSync(envRuntimePath, file);
     process.exit(0);
 }
